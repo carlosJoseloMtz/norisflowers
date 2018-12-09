@@ -1,0 +1,25 @@
+{
+  "name": "pwa-ecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:js": "webpack-dev-server --hot --inline --mode development",
+    "dev:css": "sass --watch styles:build/styles",
+    "build": "webpack --mode production && sass styles:build/styles",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ObjectWave Corp.",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.15.2",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "@vaadin/router": "^1.2.0",
+    "@webcomponents/webcomponentsjs": "^2.2.1"
+  }
+}

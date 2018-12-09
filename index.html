@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Noris Flowers</title>
+    <link rel="stylesheet" href="/build/styles/critical.css">
+  </head>
+  <body>
+    <noscript>
+      You have to enable JS to render this site.
+    </noscript>
+
+    <ecommerce-app></ecommerce-app>
+    <script>
+      var appJs = document.createElement('script')
+      appJs.src = '/build/app.js'
+      appJs.type = 'text/javascript'
+      appJs.async = true
+      appJs.defer = true
+
+      if ('customElements' in window) {
+        document.querySelector('body')
+          .appendChild(appJs)
+      } else {
+        var body = document.querySelector('body')
+
+        var webComponentsJs = document.createElement('script')
+        webComponentsJs.type = 'text/javascript'
+        webComponentsJs.src = "https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.2.1/webcomponents-bundle.js"
+        webComponentsJs.async = true
+
+        webComponentsJs.onload = function () {
+          body.appendChild(appJs)
+        }
+
+        body.appendChild(webComponentsJs)
+      }
+    </script>
+  </body>
+</html>
