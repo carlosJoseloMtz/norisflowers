@@ -4,7 +4,6 @@ import {customComponent} from '../components.utils.js'
 const homePageTemplate = document.createElement('template')
 homePageTemplate.innerHTML = `
 <div>
-  <navigation-menu></navigation-menu>
   <h1>hi</h1>
 </div>
 `

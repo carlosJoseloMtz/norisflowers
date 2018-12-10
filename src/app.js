@@ -1,7 +1,9 @@
+import './components/navigation-menu.js'
 import {setupRoutes} from './routes.js'
 
 const applicationTemplate = document.createElement('div')
 applicationTemplate.innerHTML = `
+  <navigation-menu></navigation-menu>
   <div class="page-wrapper"></div>
 `
 

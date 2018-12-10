@@ -1,23 +1,48 @@
 
-nav {
+.top-navigation {
+  background-color: $primary-color;
 
-  ul {
-    margin: 0;
-    padding: 0;
+  nav {
+    ul {
+      margin: 0;
+      padding: 0;
 
-    li {
-      display: block;
-
-      a {
-        background-color: $primary-color;
-        color: $primary-color-text;
+      li {
         display: block;
-        padding: 20px 10px;
-        text-decoration: none;
 
-        &:hover {
-          background-color: lighten($primary-color, 10);
+        a {
+          background-color: $secundary-color;
+          color: $secundary-color-text;
+          display: block;
+          padding: 20px 10px;
+          text-decoration: none;
+
+          &:hover {
+            background-color: lighten($secundary-color, 10);
+          }
         }
+      }
+    }
+  }
+
+  .top-section {
+    display: flex;
+    padding-top: 20px;
+
+    .link {
+      flex: 1;
+      text-align: center;
+      img {
+        width: 2em;
+      }
+    }
+
+    .logo-section {
+      flex: 1;
+      text-align: center;
+      margin-top: -10px;
+      img {
+        max-width: 170px;
       }
     }
   }

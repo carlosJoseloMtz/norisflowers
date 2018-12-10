@@ -1,11 +1,30 @@
 import {customComponent} from '../components.utils.js'
+import './search-box.js'
 
 const template = document.createElement('template')
 template.innerHTML = `
-<nav>
-  <ul>
-  </ul>
-</nav>
+<div class="top-navigation">
+  <div class="top-section">
+    <div class="link">
+      <a href="/">
+        <img src="/build/images/baseline-menu-24px.svg"/>
+      </a>
+    </div>
+    <div class="logo-section">
+      <img src="/build/images/logo.png"/>
+    </div>
+    <div class="link">
+      <a href="/cart">
+        <img src="/build/images/baseline-shopping_cart-24px.svg"/>
+      </a>
+    </div>
+  </div>
+  <search-box></search-box>
+  <nav>
+    <ul>
+    </ul>
+  </nav>
+</div>
 `
 
 class NavigationMenu extends HTMLElement {

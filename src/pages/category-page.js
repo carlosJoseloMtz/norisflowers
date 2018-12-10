@@ -8,7 +8,6 @@ class CategoryPage extends HTMLElement {
 
   connectedCallback () {
     this.innerHTML = `
-      <navigation-menu></navigation-menu>
       hola :V category ${this.location.params.categoryId}
     `
   }
