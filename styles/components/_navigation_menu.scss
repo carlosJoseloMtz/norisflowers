@@ -4,6 +4,8 @@
 
   nav {
     ul {
+      background-color: $secundary-color;
+      display: none;
       margin: 0;
       padding: 0;
 
@@ -21,6 +23,19 @@
             background-color: lighten($secundary-color, 10);
           }
         }
+
+        @media (min-width: 768px) {
+          display: inline-block;
+        }
+      }
+
+      &.toggle {
+        display: block;
+      }
+
+      @media (min-width: 768px) {
+        display: block;
+        padding: $page-padding;
       }
     }
   }
@@ -34,6 +49,18 @@
       text-align: center;
       img {
         width: 2em;
+      }
+    }
+
+    .hb-button {
+      display: block;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      @media (min-width: 768px) {
+        display: none;
       }
     }
 

@@ -6,9 +6,7 @@ template.innerHTML = `
 <div class="top-navigation">
   <div class="top-section">
     <div class="link">
-      <a href="/">
-        <img src="/build/images/baseline-menu-24px.svg"/>
-      </a>
+      <img class="hb-button" src="/build/images/baseline-menu-24px.svg"/>
     </div>
     <div class="logo-section">
       <img src="/build/images/logo.png"/>
@@ -37,7 +35,7 @@ class NavigationMenu extends HTMLElement {
   connectedCallback () {
     this.appendChild(template.content.cloneNode(true))
 
-    const list = this.querySelector('ul')
+    this.listNodes = this.querySelector('ul')
 
     this.links.forEach(link => {
       const listElement = document.createElement('li')
@@ -47,8 +45,15 @@ class NavigationMenu extends HTMLElement {
       anchor.textContent = link.text
       listElement.appendChild(anchor)
 
-      list.appendChild(listElement)
+      this.listNodes.appendChild(listElement)
     })
+
+    this.querySelector('.hb-button')
+      .addEventListener('click', this.onHamburgerButton.bind(this))
+  }
+
+  onHamburgerButton () {
+    this.listNodes.classList.toggle('toggle')
   }
 
   get links () {
