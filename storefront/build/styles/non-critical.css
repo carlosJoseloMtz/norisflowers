@@ -1,0 +1,20 @@
+input {
+  border: 1px solid #abb4e2;
+  border-radius: 6px;
+  color: #212121;
+  outline: none;
+  padding: 10px 7px;
+}
+input:focus {
+  border-color: #3F51B5;
+}
+
+.search-box {
+  padding: 20px 0;
+  text-align: center;
+}
+.search-box input {
+  width: 80%;
+}
+
+/*# sourceMappingURL=non-critical.css.map */
