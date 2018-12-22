@@ -1,0 +1,76 @@
+
+.top-navigation {
+  background-color: $primary-color;
+
+  nav {
+    ul {
+      background-color: $secundary-color;
+      display: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: block;
+
+        a {
+          background-color: $secundary-color;
+          color: $secundary-color-text;
+          display: block;
+          padding: 20px 10px;
+          text-decoration: none;
+
+          &:hover {
+            background-color: lighten($secundary-color, 10);
+          }
+        }
+
+        @media (min-width: 768px) {
+          display: inline-block;
+        }
+      }
+
+      &.toggle {
+        display: block;
+      }
+
+      @media (min-width: 768px) {
+        display: block;
+        padding: $page-padding;
+      }
+    }
+  }
+
+  .top-section {
+    display: flex;
+    padding-top: 20px;
+
+    .link {
+      flex: 1;
+      text-align: center;
+      img {
+        width: 2em;
+      }
+    }
+
+    .hb-button {
+      display: block;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+
+    .logo-section {
+      flex: 1;
+      text-align: center;
+      margin-top: -10px;
+      img {
+        max-width: 170px;
+      }
+    }
+  }
+}
