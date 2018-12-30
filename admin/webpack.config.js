@@ -9,7 +9,7 @@ module.exports = {
   entry: {
     "app": joinPath('src/app.js'),
     "home-page": joinPath('src/pages/home-page.js'),
-    "category-page": joinPath('src/pages/category-page.js')
+    "products-page": joinPath('src/pages/products-page.js')
   },
 
   output: {

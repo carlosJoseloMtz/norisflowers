@@ -21,8 +21,6 @@ class ApplicationContext {
       console.warn(`Could not find implementation for name ${name}`)
     }
 
-    console.log('retrieving implementation', impl)
-
     return impl
   }
 }

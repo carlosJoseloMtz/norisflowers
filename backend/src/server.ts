@@ -1,7 +1,9 @@
 import express from 'express'
 import mongoose from 'mongoose'
+import cors from 'cors'
 import {setup as v1} from './routes/v1'
 import {wireImplementations} from './app-context/setup'
+import { runInNewContext } from 'vm';
 
 const app: express.Application = express()
 
@@ -11,6 +13,8 @@ mongoose.connect('mongodb://localhost:27017/norisflowers', {
 
 wireImplementations()
 
+// TODO: add configuration for allowed domains
+app.use('*', cors())
 app.use(v1())
 
 const port: Number = 8080

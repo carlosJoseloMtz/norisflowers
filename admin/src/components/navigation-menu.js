@@ -11,13 +11,7 @@ template.innerHTML = `
     <div class="logo-section">
       <img src="/build/images/logo.png"/>
     </div>
-    <div class="link">
-      <a href="/cart">
-        <img src="/build/images/baseline-shopping_cart-24px.svg"/>
-      </a>
-    </div>
   </div>
-  <search-box></search-box>
   <nav>
     <ul>
     </ul>
@@ -34,39 +28,12 @@ class NavigationMenu extends HTMLElement {
 
   connectedCallback () {
     this.appendChild(template.content.cloneNode(true))
-
-    this.listNodes = this.querySelector('ul')
-
-    this.links.forEach(link => {
-      const listElement = document.createElement('li')
-
-      const anchor = document.createElement('a')
-      anchor.href = link.link
-      anchor.textContent = link.text
-      listElement.appendChild(anchor)
-
-      this.listNodes.appendChild(listElement)
-    })
-
     this.querySelector('.hb-button')
       .addEventListener('click', this.onHamburgerButton.bind(this))
   }
 
   onHamburgerButton () {
-    this.listNodes.classList.toggle('toggle')
-  }
-
-  get links () {
-    return [
-      {
-        link: '/categories/category1',
-        text: 'Categoría 1'
-      },
-      {
-        link: '/categories/category2',
-        text: 'Categoría 2'
-      }
-    ]
+    this.listNodes && this.listNodes.classList.toggle('toggle')
   }
 }
 

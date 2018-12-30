@@ -25,8 +25,8 @@ const setupRoutes = (contentNode) => {
       action: lazyLoadChunk
     },
     {
-      path: '/categories/:categoryId',
-      component: 'category-page',
+      path: '/products',
+      component: 'products-page',
       action: lazyLoadChunk
     }
   ])

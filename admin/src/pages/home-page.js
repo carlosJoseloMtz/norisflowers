@@ -1,10 +1,10 @@
-import '../components/navigation-menu.js'
 import {customComponent} from '../components.utils.js'
 
 const homePageTemplate = document.createElement('template')
 homePageTemplate.innerHTML = `
 <div>
   <h1>hi</h1>
+  this is the dashboard
 </div>
 `
 
